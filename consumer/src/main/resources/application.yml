@@ -1,0 +1,10 @@
+spring
+  application
+    name:producer
+  rabbitmq
+    host:localhost
+    virtual-host:vhost
+    password:guest
+    username:quest
+
+
