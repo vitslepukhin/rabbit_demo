@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: consumer2
+  rabbitmq:
+    host: localhost
+    virtual-host: vhost
+    username: admin
+    password: 1234
+
+
