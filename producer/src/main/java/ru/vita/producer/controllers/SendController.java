@@ -9,14 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import static ru.vita.producer.configurations.MQConfiguration.EXCHANGE_NAME;
+import static ru.vita.producer.configurations.MQConfiguration.ROUTING_KEY_1;
+import static ru.vita.producer.configurations.MQConfiguration.ROUTING_KEY_2;
+
 @Log4j2
 @RestController
 @RequestMapping("/send")
 @RequiredArgsConstructor
 public class SendController {
-    static final String EXCHANGE_NAME = "firstExchange";
-    static final String ROUTING_KEY_1 = "firstRoutingKey";
-    static final String ROUTING_KEY_2 = "secondRoutingKey";
     private final RabbitTemplate rabbitTemplate;
     private static Long counter = 0L;
 
@@ -37,6 +38,6 @@ public class SendController {
     }
 
     private static void log(String message) {
-        log.info("{}is send! Count sent object :{}", message, ++counter);
+        log.info("{} is send! Count sent object :{}", message, ++counter);
     }
 }

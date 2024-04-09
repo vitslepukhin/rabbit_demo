@@ -1,10 +1,10 @@
-spring
-  application
-    name:producer
-  rabbitmq
-    host:localhost
-    virtual-host:vhost
-    password:guest
-    username:quest
-server
-  port:8093
+spring:
+  application:
+    name: producer
+  rabbitmq:
+    host: localhost
+    virtual-host: vhost
+    username: admin
+    password: 1234
+server:
+  port: 8093

@@ -6,9 +6,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class MQConfiguration {
-    static final String QUEUE_NAME = "firstQueue";
-    static final String ROUTING_KEY = "firstRoutingKey";
-    static final String EXCHANGE_NAME = "firstExchange";
+    public static final String QUEUE_NAME = "firstQueue";
+    public static final String EXCHANGE_NAME = "firstExchange";
+    public static final String ROUTING_KEY_1 = "routingKey.1";
+    public static final String ROUTING_KEY_2 = "routingKey.2";
 
     @Bean
     public Queue myQueue() {
@@ -22,7 +23,7 @@ public class MQConfiguration {
 
     @Bean
     Binding binding(Queue queue, Exchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY).noargs();
+        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY_1).noargs();
     }
 
 }

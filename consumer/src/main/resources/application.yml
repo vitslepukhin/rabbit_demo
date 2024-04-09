@@ -1,10 +1,10 @@
-spring
-  application
-    name:producer
-  rabbitmq
-    host:localhost
-    virtual-host:vhost
-    password:guest
-    username:quest
+spring:
+  application:
+    name : consumer
+  rabbitmq:
+    host: localhost
+    virtual-host: vhost
+    username: admin
+    password: 1234
 
 
